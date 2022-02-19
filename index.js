@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const multer = require('multer')
 const debug = require('debug')
-const Restrict = require('@ersinfotech/restrict')
+const Restrict = require('./@ersinfotech/restrict')
 const graphql = require('./graphql')
 const MP = require('./middleware-promise')
 
