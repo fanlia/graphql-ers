@@ -85,16 +85,28 @@ const jsonreq = (params = {}) => new Promise((resolve, reject) => {
 module.exports = jsonreq
 
 // test
-// ;(async () => {
-//     const getResult = await jsonreq({
-//         url: 'http://httpbin.org/get',
-//     })
+;(async () => {
+    const getResult = await jsonreq({
+        url: 'http://httpbin.org/get',
+    })
 
-//     console.log({getResult})
+    console.log({getResult})
 
-//     const postResult = await jsonreq({
-//         url: 'http://httpbin.org/post',
-//         json: { ok: true, message: 'hello world' },
-//     })
-//     console.log({postResult})
-// })()
+    const postResult = await jsonreq({
+        url: 'http://httpbin.org/post',
+        json: { ok: true, message: 'hello world' },
+    })
+    console.log({postResult})
+
+    const getResultHttps = await jsonreq({
+        url: 'https://httpbin.org/get',
+    })
+
+    console.log({getResultHttps})
+
+    const postResultHttps = await jsonreq({
+        url: 'https://httpbin.org/post',
+        json: { ok: true, message: 'hello world' },
+    })
+    console.log({postResultHttps})
+})()
